@@ -1,60 +1,60 @@
 #include <stdio.h>
 int main() {
-    int a,b;
-    int option;
-    int sum,sub,mul,div,rem;
+    float a,b;
+  char option;
+    float sum,sub,mul,div,rem;
     printf("mini calculator \n ");
-    printf("press 1 for addition \n");
-    printf("press 2 for subtraction \n");
-    printf("press 3 for multiplication \n");
-    printf("press 4 for division \n");
-    printf("press 5 for remainder \n");
+    printf("press + for addition \n");
+    printf("press - for subtraction \n");
+    printf("press * for multiplication \n");
+    printf("press / for division \n");
+    printf("press %% for remainder \n");
     printf("enter your choice : ");
-    scanf("%d",&option);
-    if(option ==1)
+    scanf(" %c",&option);
+    if(option == '+')
     {
         printf("enter two numbers for addition : ");
-        scanf("%d %d",&a,&b);
+        scanf("%f %f",&a,&b);
         sum = a + b;
-        printf("the sum is : %d",sum);
+        printf("the sum is : %f",sum);
     }
-    else if(option == 2)
+    else if(option == '-')
     {
         printf("enter two numbers for subtraction : ");
-        scanf("%d %d",&a,&b);
+        scanf("%f %f",&a,&b);
         sub = a - b;
-        printf("the difference is : %d",sub);
+        printf("the difference is : %f",sub);
     }
-    else if(option == 3)
+    else if(option == '*')
     {
         printf("enter two numbers for multiplication : ");
-        scanf("%d %d",&a,&b);
+        scanf("%f %f",&a,&b);
         mul = a * b;
-        printf("the product is : %d",mul);
+        printf("the product is : %f",mul);
     }
-    else if(option == 4)
+    else if(option == '/')
     {
         printf("enter two numbers for division : ");
-        scanf("%d %d",&a,&b);
+        scanf("%f %f",&a,&b);
         //nested if statement to check if the divisor is zero`
         if(b!=0)
         {
             div = a / b;
-            printf("the division is : %d",div);
+            printf("the division is : %f",div);
         }
         else
         {
             printf("divided by zero is invalid");      
         }
     }
-    else if(option == 5)
+    else if(option == '%')
     {
         printf("enter two numbers for remainder : ");
-        scanf("%d %d",&a,&b);
+        scanf("%f %f",&a,&b);
         if(b!=0)
         {
-            rem = a % b;
-            printf("the remainder is : %d",rem);
+            rem = fmod(a, b);
+            printf("the remainder is : %f",rem);
         }
         else
         {
