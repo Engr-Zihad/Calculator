@@ -53,7 +53,7 @@ int main() {
         scanf("%f %f",&a,&b);
         if(b!=0)
         {
-            rem = fmod(a, b);
+            rem = (int)a % (int)b; //casting to int for modulus operation
             printf("the remainder is : %f",rem);
         }
         else
